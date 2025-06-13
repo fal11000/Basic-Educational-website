@@ -1,0 +1,248 @@
+/* Basic Reset & Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: white;
+}
+
+.container {
+    width: 90%; /* Responsive width */
+    max-width: 1200px; /* Max width for larger screens */
+    margin: auto;
+    overflow: hidden; /* Clear floats */
+    padding: 20px 0;
+}
+
+h1, h2, h3, h4 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.75em; }
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+.btn {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.btn-small {
+    padding: 8px 15px;
+    font-size: 0.9em;
+}
+
+/* Header */
+header {
+    background: #fff;
+    color: #333;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.logo a {
+    color: #333;
+}
+
+#main-nav .nav-links {
+    list-style: none;
+    display: flex; /* For desktop */
+}
+
+#main-nav .nav-links li {
+    margin-left: 20px;
+}
+
+#main-nav .nav-links a {
+    color: #333;
+    padding: 5px 0;
+    display: block;
+}
+
+.hamburger {
+    display: none; /* Hidden on desktop */
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('https://via.placeholder.com/1500x500/007bff/ffffff?text=Education+Banner') no-repeat center center/cover;
+    color: red;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-section h2 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color:#007bff
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Courses Section */
+.courses-section {
+    padding: 40px 0;
+    background: purple;
+    text-align: center;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.course-card {
+    background:#007bff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.course-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* About & Contact Sections */
+.about-section, .contact-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-section textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small screens (e.g., mobile) */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    #main-nav .nav-links {
+        flex-direction: column;
+        width: 100%;
+        display: none; /* Hide by default on mobile */
+        text-align: center;
+    }
+
+    #main-nav .nav-links.active {
+        display: flex; /* Show when active */
+    }
+
+    #main-nav .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+        position: absolute;
+        right: 5%;
+        top: 25px;
+    }
+
+    .hero-section {
+        padding: 60px 0;
+    }
+
+    .hero-section h2 {
+        font-size: 2.2em;
+    }
+
+    .hero-section p {
+        font-size: 1em;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr; /* Stack cards on small screens */
+    }
+}
+#p {
+    color: blue;
+}
